@@ -24,11 +24,11 @@ export default function Sidebar() {
           "
         >
           <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center text-white font-semibold select-none">
-            J
+            U
           </div>
           <div className="overflow-hidden">
             <p className="font-semibold truncate max-w-[180px]">
-              John Doe
+              User1
             </p>
             <p className="text-sm text-[#94A3B8] truncate max-w-[180px]">
               Last message preview here...
@@ -47,11 +47,11 @@ export default function Sidebar() {
           "
         >
           <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center text-white font-semibold select-none">
-            J
+            U
           </div>
           <div className="overflow-hidden">
             <p className="font-semibold truncate max-w-[180px]">
-              John Doe
+              User2
             </p>
             <p className="text-sm text-[#94A3B8] truncate max-w-[180px]">
               Last message preview here...

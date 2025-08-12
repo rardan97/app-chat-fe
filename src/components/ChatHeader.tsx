@@ -19,7 +19,7 @@ export default function ChatHeader() {
 
         <div>
           <p className="font-semibold text-[#CBD5E1] leading-tight">
-            John Doe
+            User1
           </p>
           <p className="text-sm text-[#94A3B8]">online</p>
         </div>

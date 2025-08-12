@@ -1,19 +1,37 @@
-import './App.css'
-import ChatWindow from './components/ChatWindow'
-import ProfileSidebar from './components/ProfileSidebar'
-import Sidebar from './components/Sidebar'
 
+import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import { AuthProvider } from './context/AuthContext'
+import PrivateRoute from './utils/PrivateRoute'
+import AppLayout from './layouts/AppLayouts'
+import ChatPage from './page/ChatPage'
+import ProfilPage from './page/ProfilPage'
+import InvitePage from './page/InvitePage'
+import LoginPage from './page/LoginPage'
+import RegisterPage from './page/RegisterPage'
+import SettingPage from './page/SettingPage'
 
 function App() {
 
   return (
     <>
-    <div className="flex">
-      <ProfileSidebar />
-      <Sidebar />
-      
-      <ChatWindow />
-    </div>
+    <AuthProvider>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path='/' element={
+          <PrivateRoute>
+            <AppLayout />
+          </PrivateRoute>
+        }>
+        <Route index element={<ChatPage />} />
+        <Route path="/profile" element={<ProfilPage />} />
+        <Route path="/setting" element={<SettingPage />} />
+        <Route path="/invite" element={<InvitePage />} />
+        </Route>
+        
+      </Routes>
+       </AuthProvider>
     </>
   )
 }
