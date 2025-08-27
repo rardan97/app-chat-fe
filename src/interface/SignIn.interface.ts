@@ -3,11 +3,10 @@ export interface SignInReq {
     password: string;
 }
 
-
 export interface SignInRes {
-  token: string;
-  refreshToken: string;
-  userId: number;
-  username: string;
-  type: string;
+    token: string;
+    refreshToken: string;
+    userId: number;
+    username: string;
+    type: string;
 }

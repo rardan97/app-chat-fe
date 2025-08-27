@@ -1,6 +1,6 @@
 // components/ProfileSidebar.tsx
 
-import { User, Settings, UserPlus, MessageSquareText } from "lucide-react";
+import { User, Settings, UserPlus, MessageSquareText, Contact } from "lucide-react";
 
 export default function ProfileSidebar() {
     return (
@@ -29,7 +29,15 @@ export default function ProfileSidebar() {
                     <Settings className="w-6 h-6" />
                 </button>
             </a>
-            <a href="/invite">
+            <a href="/member">
+                <button
+                    className="flex flex-col items-center justify-center w-15 h-15 rounded-full hover:bg-blue-700 text-blue-300 hover:text-white transition-colors"
+                    aria-label="member"
+                >
+                    <Contact className="w-6 h-6" />
+                </button>
+            </a>
+            <a href="/nonmember">
                 <button
                     className="flex flex-col items-center justify-center w-15 h-15 rounded-full hover:bg-blue-700 text-blue-300 hover:text-white transition-colors"
                     aria-label="Profile"

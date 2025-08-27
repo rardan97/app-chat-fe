@@ -47,13 +47,11 @@ export default function LoginForm() {
                     const userData: UserInfo = {
                         username: result.data.username
                     };
-
-
                     localStorage.setItem("accessToken", result.data.token);
                     localStorage.setItem("refreshToken", result.data.refreshToken);
                     localStorage.setItem("user_data", JSON.stringify(userData));
                     login(result.data);
-                    navigate("/home");
+                    navigate("/");
                 }else{
                     setErrorsAll("Login gagal. Cek email/password.");
                 }
