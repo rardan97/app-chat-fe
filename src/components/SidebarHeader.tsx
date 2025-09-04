@@ -3,7 +3,7 @@ import { MoreVertical } from "lucide-react";
 
 export default function SidebarHeader() {
   return (
-    <div className="flex items-center justify-between mb-5 py-3 px-4 border-b border-[#1F2D40] shadow-sm">
+    <div className="flex items-center justify-between mb-5 py-3 px-4  bg-[#050836] shadow-sm">
       {/* Logo + Avatar */}
       <div className="flex items-center gap-3">
         

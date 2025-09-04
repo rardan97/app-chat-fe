@@ -27,7 +27,7 @@ const handleKeyDown = (e: React.KeyboardEvent) => {
 
 
 return (
-    <div className="flex items-center gap-3 p-6 bg-[#142337cc] rounded-t-xl shadow-lg">
+    <div className="flex items-center gap-3 p-6 bg-[#010425] rounded-t-xl shadow-lg">
         <Textarea
             value={text}
             onChange={(e) => setText(e.target.value)}

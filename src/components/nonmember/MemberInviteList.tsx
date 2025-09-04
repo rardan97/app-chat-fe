@@ -59,15 +59,26 @@ export default function MemberInviteList() {
   
     return (
         <>
-            <div className="container mx-auto p-6">
-                <h1 className="text-3xl font-bold mb-6 text-center">Member Invite List</h1>
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+       
+                
+            <div className="container mx-auto p-3">
+                <div className="px-6 py-4">
+                    <h2 className="text-2xl font-medium tracking-wide mb-2 text-white">
+                        Invite Members
+                    </h2>
+                    <p className="text-sm text-slate-400 mb-4">
+                        Add users to this workspace or team.
+                    </p>
+                </div>
+                <div className="grid gap-6 md:grid-cols-4 lg:grid-cols-4">
+                {/* <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"> */}
                     {users
                     .filter((user) => user.userId !== null && user.userId !== undefined)
                     .map((user) => (
                         <Card
                             key={user.userId}
-                            className="shadow-lg rounded-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+                            className="shadow-lg rounded-2xl border border-gray-200 hover:shadow-xl transition-shadow duration-300"
                         >
                             <CardHeader>
                                 <CardTitle className="text-xl font-semibold">

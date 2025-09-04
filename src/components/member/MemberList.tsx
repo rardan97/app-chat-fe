@@ -56,44 +56,62 @@ export default function MemberList() {
   
     return (
         <>
-            <div className="container mx-auto p-6">
-                <h1 className="text-3xl font-bold mb-6 text-center">Member List</h1>
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {users
-                    .filter((user) => user.userId !== null && user.userId !== undefined)
-                    .map((user) => (
-                        <Card
-                            key={user.userId}
-                            className="shadow-lg rounded-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
-                        >
-                            <CardHeader>
-                                <CardTitle className="text-xl font-semibold">
-                                    {user.displayName || "No Name"}
-                                </CardTitle>
-                                <CardDescription className="text-gray-500">
-                                    @{user.username || "username"}
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="mb-2">
-                                    <span className="font-semibold">Email:</span> {user.email || "-"}
-                                </p>
-                                <p className="mb-2">
-                                    <span className="font-semibold">User ID:</span> {user.userId}
-                                </p>
-                            </CardContent>
+        
+            <div className="container mx-auto p-3 border-t border-white/10">
+                <div className="px-6 py-4">
+                   <h2 className="text-2xl font-medium tracking-wide mb-2 text-white">
+                    Your Connections
+                    </h2>
+                    <p className="text-sm text-slate-400 mb-4">
+                    You’re already connected with these members.
+                    </p>
+                </div>
+                <div className="grid gap-6 md:grid-cols-4 lg:grid-cols-4">
 
-                            <CardFooter className="flex justify-end">
-                                <CardAction>
-                                   <button
-                                        className={`px-4 py-2 rounded transition text-white bg-blue-600 hover:bg-blue-700"
-                                        }`}
-                                        // onClick={() => handleInvite(user.userId)}
-                                    >
-                                        Chat
-                                    </button>
-                                </CardAction>
-                            </CardFooter>
+                    {users
+                        .filter((user) => user.userId !== null && user.userId !== undefined)
+                        .filter((user) => user.status !== "pending")
+                        .map((user) => (
+                        <Card  key={user.userId} className="rounded-3xl overflow-hidden shadow-xl bg-[#030833]  max-w-sm mx-auto p-0">
+                            {/* Header image */}
+                            <div className="relative">
+                                <div
+                                    className="h-40 w-full bg-cover bg-center"
+                                    style={{
+                                        backgroundImage: "url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=800&q=80')"
+                                    }}
+                                />
+
+                                {/* Avatar */}
+                                <div className="absolute inset-x-0 -bottom-14 flex justify-center z-10">
+                                    <img
+                                        src="https://randomuser.me/api/portraits/women/44.jpg"
+                                        alt="Profile"
+                                        className="w-28 h-28 object-cover rounded-full border-4 border-white shadow-md"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Main content */}
+                            <div className="mt-16 text-center px-6 pb-6">
+                                <h2 className="text-xl font-semibold text-white">{user.username}</h2>
+                                <p className="text-sm text-white">Amsterdam, Netherlands</p>
+                                <p className="mt-1 text-white font-medium">Copywriter</p>
+                                <div className="flex justify-center gap-4 mt-4 px-6">
+                            <button
+                                className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-blue-700 transition duration-200"
+                                onClick={() => alert("Invite friends clicked")}
+                            >
+                                Invite Friends
+                            </button>
+                            <button
+                                className="bg-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full hover:bg-gray-300 transition duration-200"
+                                onClick={() => alert("View profile clicked")}
+                            >
+                                View Profile
+                            </button>
+                            </div>
+                            </div>
                         </Card>
                     ))}
                 </div>

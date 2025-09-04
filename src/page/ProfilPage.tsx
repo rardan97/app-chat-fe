@@ -3,7 +3,7 @@ import ProfileView from "@/components/profile/ProfileView"
 function ProfilPage() {
     return (
         <> 
-            <div className="w-full bg-[#0F172A] text-[#CBD5E1]">
+            <div className="w-full bg-[#010425] text-[#CBD5E1]">
                 <ProfileView />
             </div>
         </>

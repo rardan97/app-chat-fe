@@ -6,10 +6,17 @@ import NonMemberList from "@/components/nonmember/NonMemberList"
 function NonMemberPage() {
     return (
         <> 
-            <div className="w-full bg-[#0F172A] text-[#CBD5E1]">
+        <div className="w-full bg-[#010425] text-[#CBD5E1]">
+  
+
+    <MemberInviteList />
+  
+    <NonMemberList />
+</div>
+            {/* <div className="w-full bg-[#010425] text-[#CBD5E1]">
                 <MemberInviteList />
                 <NonMemberList />
-            </div>
+            </div> */}
         </>
     )
 }

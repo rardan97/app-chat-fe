@@ -1,4 +1,4 @@
-import { Video, Phone, MoreVertical } from "lucide-react";
+import { MoreVertical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { MemberUserRoom } from "@/interface/MemberUser.interface";
 
@@ -8,7 +8,7 @@ interface ChatHeaderProps {
 
 export default function ChatHeader({user}: ChatHeaderProps) {
     return (
-        <div className="border-b border-[#1E293B] bg-[#0F172A] px-6 py-4 flex justify-between items-center">
+        <div className=" bg-[#010425] px-6 py-4 flex justify-between items-center">
             <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-[#2563EB] flex items-center justify-center text-white font-semibold text-lg">J</div>
                 <div>
@@ -19,7 +19,7 @@ export default function ChatHeader({user}: ChatHeaderProps) {
                 </div>
             </div>
             <div className="flex items-center gap-3">
-                {[Video, Phone, MoreVertical].map((Icon, idx) => (
+                {[MoreVertical].map((Icon, idx) => (
                 <Button
                     key={idx}
                     variant="ghost"

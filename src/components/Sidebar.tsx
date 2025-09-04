@@ -44,9 +44,7 @@ export default function Sidebar({ onSelectUser }: SidebarProps) {
 return (
     <aside
     className="
-        w-[300px] h-screen py-5 flex flex-col
-        border-r border-[#1E293B]/70
-        bg-[#0F172A] text-[#CBD5E1]
+        w-[300px] h-screen py-5 flex flex-col border-r border-[#01063a] bg-[#010425] text-[#CBD5E1]
         shadow-lg px-2
     "
     >
